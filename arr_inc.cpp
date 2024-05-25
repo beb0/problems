@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void inc(int arr[], int l)
+//incrementing index on arr elements
+
+void arr_inc(int arr[], int l)
 {
     if(l == 1)
     {
@@ -9,14 +11,13 @@ void inc(int arr[], int l)
         return;
     }
 
-    inc(arr, l-1);
+    arr_inc(arr, l-1);
     cout << arr[l - 1] + l - 1 << " ";
 }
 
 int main() {
 
-    int arr[] = {1, 8, 2, 10, 3}; //avg 16/5 = 3.2
+    int arr[] = {1, 8, 2, 10, 3}; 
 
-    inc(arr, 5);
-
+    arr_inc(arr, 5);
 }
